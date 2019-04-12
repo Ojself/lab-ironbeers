@@ -21,6 +21,7 @@ app.get('/', (req, res, next) => {
 
 //Second route
 app.get("/beers", (req, res, next) => {
+  console.log(punkAPI)
   punkAPI
     .getBeers()
     .then(beers => {
@@ -33,7 +34,7 @@ app.get("/beers", (req, res, next) => {
 });
 
 //Third route
-app.get('/random-beer', (req, res, next) => {
+app.get('/random-beer', ( req, res, next) => {
   punkAPI
     .getRandom()
     .then(beers =>{
